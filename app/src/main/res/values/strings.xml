@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BGMI Booster</string>
+    <string name="title_text">BGMI Booster</string>
+    <string name="subtitle_text">HyperOS Optimization Service</string>
+    <string name="status_label">System Status</string>
+    <string name="status_ready">Ready for optimization</string>
+    <string name="instructions_step_1">Step 1: Open JoyOSE settings and clear application data.</string>
+    <string name="instructions_step_2">Step 2: Launch the application to apply performance profiles.</string>
+    <string name="btn_config_joyose">Configure JoyOSE</string>
+    <string name="btn_launch_game">Launch BGMI</string>
+    <string name="dev_credit">Developed by @otaku_bhaiya</string>
+    <string name="instagram_url">https://www.instagram.com/otaku_bhaiya/</string>
+
+    <string name="joyose_not_found">JoyOSE component not detected.</string>
+    <string name="bgmi_not_found">Battlegrounds Mobile India not detected.</string>
+</resources>
