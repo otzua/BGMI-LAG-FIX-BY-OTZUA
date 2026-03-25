@@ -5,13 +5,39 @@
     <string name="subtitle_text">HyperOS Optimization Service</string>
     <string name="status_label">System Status</string>
     <string name="status_ready">Ready for optimization</string>
-    <string name="instructions_step_1">Step 1: Open JoyOSE settings and clear application data.</string>
+    <string name="instructions_step_1">Step 1: Open joyose settings and clear application data.</string>
     <string name="instructions_step_2">Step 2: Launch the application to apply performance profiles.</string>
-    <string name="btn_config_joyose">Configure JoyOSE</string>
+    <string name="btn_config_joyose">Configure joyose</string>
     <string name="btn_launch_game">Launch BGMI</string>
     <string name="dev_credit">Developed by @otaku_bhaiya</string>
     <string name="instagram_url">https://www.instagram.com/otaku_bhaiya/</string>
+    <string name="github_url">https://github.com/otzua/BGMI-LAG-FIX-BY-OTZUA</string>
 
-    <string name="joyose_not_found">JoyOSE component not detected.</string>
+    <string name="joyose_not_found">joyose component not detected.</string>
     <string name="bgmi_not_found">Battlegrounds Mobile India not detected.</string>
+
+    <string name="user_count_loading">---</string>
+    <string name="user_count_fallback">---</string>
+    <string name="user_count_format">%s</string>
+    <string name="user_count_label">DOWNLOADS</string>
+
+    <string name="share_app_text">Check out this BGMI Lag Fix app: %s</string>
+    <string name="btn_share_app">Share App</string>
+
+    <string name="section_performance_tools">PERFORMANCE TOOLS</string>
+    <string name="section_secret_settings">XIAOMI SECRET SETTINGS</string>
+
+    <string name="btn_game_turbo">Game Turbo</string>
+    <string name="btn_cleaner">MIUI Cleaner</string>
+
+    <!-- Secret Settings -->
+    <string name="btn_performance_mode">Performance Mode</string>
+    <string name="btn_autostart">Autostart</string>
+    <string name="btn_apply_tweaks">Apply System Tweaks</string>
+    <string name="btn_reset_resolution">Reset Resolution</string>
+
+    <string name="game_turbo_guide_title">Game Turbo Instructions</string>
+    <string name="game_turbo_guide_message">Go to Settings → Touch Response → Increase sensitivity for better performance.</string>
+    <string name="btn_got_it">Got it</string>
+    <string name="logo_desc">App Logo</string>
 </resources>

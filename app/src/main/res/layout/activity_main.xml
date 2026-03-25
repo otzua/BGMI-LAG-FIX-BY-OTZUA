@@ -1,128 +1,217 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-    android:padding="32dp">
+    android:fillViewport="true">
 
-    <!-- Header Section -->
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:fontFamily="sans-serif-light"
-        android:text="@string/title_text"
-        android:textColor="@color/white"
-        android:textSize="32sp"
-        android:letterSpacing="0.05" />
-
-    <TextView
-        android:id="@+id/tvSubtitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="sans-serif"
-        android:text="@string/subtitle_text"
-        android:textColor="@color/text_secondary"
-        android:textSize="14sp" />
-
-    <View
-        android:layout_width="40dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="40dp"
-        android:background="@color/orange_primary" />
-
-    <!-- Content Area -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
 
+        <!-- Header Section -->
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_launcher_foreground"
+            app:tint="@color/orange_primary"
+            android:contentDescription="@string/logo_desc" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/title_text"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:letterSpacing="0.05" />
+
+        <!-- DOWNLOADS Counter -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/round_button_dark"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/user_count_label"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:letterSpacing="0.2" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvUserCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/user_count_loading"
+                    android:textColor="@color/orange_primary"
+                    android:textSize="48sp" />
+
+                <ImageButton
+                    android:id="@+id/btnRefresh"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_toEndOf="@id/tvUserCount"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="8dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:src="@android:drawable/ic_menu_rotate"
+                    app:tint="@color/text_secondary"
+                    android:contentDescription="Refresh" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/orange_primary" />
+
+        <!-- Performance Tools -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
             android:fontFamily="sans-serif-medium"
-            android:text="@string/status_label"
+            android:text="@string/section_performance_tools"
             android:textColor="@color/text_secondary"
             android:textSize="12sp"
-            android:textAllCaps="true"
             android:letterSpacing="0.1" />
 
+        <Button
+            android:id="@+id/btnOpenJoyose"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/round_button_orange"
+            android:text="@string/btn_config_joyose"
+            android:textAllCaps="false"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btnLaunchBGMI"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/round_button_cream"
+            android:text="@string/btn_launch_game"
+            android:textAllCaps="false"
+            android:textColor="@color/black" />
+
+        <!-- Xiaomi Secret Settings -->
         <TextView
-            android:id="@+id/tvStatus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:fontFamily="sans-serif"
-            android:text="@string/status_ready"
-            android:textColor="@color/cream_light"
-            android:textSize="16sp" />
+            android:layout_marginTop="32dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/section_secret_settings"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:letterSpacing="0.1" />
 
-        <TextView
+        <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
-            android:fontFamily="sans-serif"
-            android:gravity="center"
-            android:lineSpacingExtra="6dp"
-            android:text="@string/instructions_step_1"
-            android:textColor="@color/text_secondary"
-            android:textSize="14sp" />
+            android:layout_marginTop="12dp"
+            android:columnCount="2"
+            android:alignmentMode="alignMargins">
+
+            <Button
+                android:id="@+id/btnGameTurbo"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:background="@drawable/round_button_dark"
+                android:text="@string/btn_game_turbo"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/btnCleaner"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:background="@drawable/round_button_dark"
+                android:text="@string/btn_cleaner"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/btnPerformanceMode"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:background="@drawable/round_button_dark"
+                android:text="@string/btn_performance_mode"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/btnAutostart"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:background="@drawable/round_button_dark"
+                android:text="@string/btn_autostart"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+        </GridLayout>
+
+        <!-- Footer -->
+        <Button
+            android:id="@+id/btnShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawableStart="@android:drawable/ic_menu_share"
+            android:drawablePadding="8dp"
+            app:drawableTint="@color/orange_primary"
+            android:text="@string/btn_share_app"
+            android:textAllCaps="false"
+            android:textColor="@color/orange_primary" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/tvDeveloper"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:fontFamily="sans-serif"
-            android:gravity="center"
-            android:lineSpacingExtra="6dp"
-            android:text="@string/instructions_step_2"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/dev_credit"
             android:textColor="@color/text_secondary"
-            android:textSize="14sp" />
+            android:textSize="12sp"
+            android:clickable="true"
+            android:focusable="true" />
 
     </LinearLayout>
-
-    <!-- Control Buttons -->
-    <Button
-        android:id="@+id/btnOpenJoyose"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@drawable/round_button_orange"
-        android:fontFamily="sans-serif-medium"
-        android:text="@string/btn_config_joyose"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
-
-    <Button
-        android:id="@+id/btnLaunchBGMI"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/round_button_cream"
-        android:fontFamily="sans-serif-medium"
-        android:text="@string/btn_launch_game"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
-
-    <!-- Developer Credit -->
-    <TextView
-        android:id="@+id/tvDeveloper"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="sans-serif-light"
-        android:text="@string/dev_credit"
-        android:textColor="@color/text_secondary"
-        android:textSize="12sp"
-        android:clickable="true"
-        android:focusable="true" />
-
-</LinearLayout>
+</ScrollView>
