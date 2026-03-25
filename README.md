@@ -1,4 +1,4 @@
-# BGMI Booster
+# BGMI Booster "FOR XIAOMI/POCO/REDMI/MI DEVICES ONLY" (100% VIBE CODED)
 
 A professional, minimalist performance optimization utility for HyperOS and MIUI devices. This tool simplifies the process of optimizing the JoyOSE system component to unlock higher frame rates (up to 90 FPS) in Battlegrounds Mobile India.
 
